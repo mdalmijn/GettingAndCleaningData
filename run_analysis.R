@@ -1,6 +1,6 @@
 ## Script to produce a tidy dataset from the UCI HAR Dataset.
 ## The script requires the reshape and dplyr libraries to be installed.
-## The working directory needs to be adjusted before running the script at line 11.
+## The working directory needs to be adjusted before running the script at line 12.
 
 library(reshape)
 library(dplyr)
@@ -66,7 +66,7 @@ for(i in 1:length(cNames)) {
        cNames[i] <- gsub("mean","Mean", cNames[i])
 }
 
-## Renaming columns of subsetData.
+## Renaming columns of subsetData
 colnames(subsetData) <- cNames
 
 ## 5. From the data set in step 4, create a second, independent tidy data set with the average of each variable for each activity and each subject.
