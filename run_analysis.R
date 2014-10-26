@@ -61,7 +61,7 @@ subsetData <- subsetData[,c(1,68,2:67)]
 cNames <- colnames(subsetData)
 
 for(i in 1:length(cNames)) {
-       cNames[i] <- gsub("[-]|^t|^f|[(][)]","", cNames[i])
+       cNames[i] <- gsub("[-]|[(][)]","", cNames[i])
        cNames[i] <- gsub("std","Std", cNames[i])
        cNames[i] <- gsub("mean","Mean", cNames[i])
 }
